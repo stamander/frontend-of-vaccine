@@ -6,7 +6,10 @@ interface TodoItem  {
   text: string;
 }
 
-export default {
+import {createStore} from 'vuex'
+
+
+export default createStore({
   data() {
     console.log("data" + this.ToDos)
     return {
@@ -31,7 +34,7 @@ export default {
       this.ToDos = this.ToDos.filter((todo) => !todo.isDone)
     },
   },
-}
+})
 </script>
 
 <template>
